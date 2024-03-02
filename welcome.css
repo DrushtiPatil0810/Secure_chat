@@ -22,7 +22,7 @@ section .container {
     width: 800px;
     height: 500px;
     background: #fff;
-    box-shadow: 0 15px 50px rgba(0, 0, 0, 0.1);
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1), 0px 7px 0px 0px rgba(0, 0, 0, 0.1);
     overflow: hidden;
     border: 2px solid #748C65;
     border-radius: 25px;
@@ -63,14 +63,12 @@ section .container .user .imgBx img {
     font-style: italic;
     text-align: center;
     width: 100%;
-    margin-bottom: 10px;
+    margin-bottom: 30px;
+    text-shadow: 0px 7px 0px rgba(0, 0, 0, 0.1);
     font-size: 2em;
     padding-left: 50px;
 }
 
-i {
-    padding: 5px 10px 5px 20px;
-}
 
 section .container .user .formBx {
     position: relative;
@@ -81,71 +79,46 @@ section .container .user .formBx {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding-right: 50px;
+    padding-right: 40px;
     transition: 0.5s;
-}
-
-section .container .user .formBx form .input-container {
-    position: relative;
-    display: flex;
-    align-items: center;
-    width: 125%;
-    margin-bottom: 15px;
-    border: 2px solid #748C65;
-    border-radius: 10px;
-    background-color: #DBE0DA;
-
-}
-
-section .container .user .formBx form .input-container svg {
-    margin-right: 8px;
-    padding: 8px;
-    background: #DBE0DA;
 }
 
 form {
     width: 150%;
 }
 
-section .container .user .formBx form .input-container svg path {
-    fill: #333;
-}
-
-section .container .user .formBx form input {
-    flex: 1;
-    padding: 10px;
-    background: transparent;
-    color: #333;
-    border: none;
-    outline: none;
-    font-size: 14px;
-    letter-spacing: 1px;
-    font-weight: 300;
-    width: 100%;
-}
-
-section .container .user .formBx form input[type='submit'] {
-    width: 100%;
-    max-width: 100px;
-    margin: 0 auto;
-    background: #DBE0DA;
-    cursor: pointer;
-    font-size: 14px;
-    transition: 0.5s;
+section .container .user .formBx form .btn {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 125%;
+    margin-bottom: 25px;
     border: 2px solid #748C65;
-    border-radius: 5px;
+    border-radius: 10px;
+    background-color: #DBE0DA;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1), 0px 7px 0px 0px rgba(0, 0, 0, 0.1);
+    padding: 10px;
+    color: #333;
+    font-size: 15px;
+    letter-spacing: 1px;
+    font-weight: 400;
 }
+
 
 .form {
     width: fit-content;
 }
 
-section .container .user .formBx form input[type='submit']:hover {
-    background: #748C65;
-    color: #fff;
+.help {
+    color: #0A77A5;
+    padding-left: 100px;
+    font-size: medium;
+    text-decoration: none;
+    text-shadow: 0px 5px 7px rgba(0, 0, 0, 0.2);
 }
 
-section .container .user .formBx form .signup {
+section .container .user .formBx form .welcome {
     position: relative;
     margin-top: 20px;
     font-size: 9px;
@@ -155,51 +128,28 @@ section .container .user .formBx form .signup {
     font-weight: 300;
 }
 
-section .container .user .formBx form .signup a {
+section .container .user .formBx form .welcome a {
     font-weight: 600;
     text-decoration: none;
     color: #677eff;
 }
 
-section .container .signupBx {
-    pointer-events: none;
+section .container .welcomeBx .formBx {
+    left: 0%;
 }
 
-section .container.active .signupBx {
-    pointer-events: initial;
-}
-
-section .container .signupBx .formBx {
+section .container.active .welcomeBx .formBx {
     left: 100%;
 }
 
-section .container.active .signupBx .formBx {
-    left: 0;
+section .container .welcomeBx .imgBx {
+    left: 0%;
 }
 
-section .container .signupBx .imgBx {
+section .container.active .welcomeBx .imgBx {
     left: -100%;
 }
 
-section .container.active .signupBx .imgBx {
-    left: 0%;
-}
-
-section .container .signinBx .formBx {
-    left: 0%;
-}
-
-section .container.active .signinBx .formBx {
-    left: 100%;
-}
-
-section .container .signinBx .imgBx {
-    left: 0%;
-}
-
-section .container.active .signinBx .imgBx {
-    left: -100%;
-}
 
 @media (max-width: 991px) {
     section .container {
@@ -215,9 +165,24 @@ section .container.active .signinBx .imgBx {
     }
 }
 
-.submit {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding-left: 50px;
+@media (max-width: 414px) {
+    section .container .user .formBx form .btn {
+        flex: 1;
+        padding: 10px;
+        color: #333;
+        font-size: 10px;
+        letter-spacing: 1px;
+        font-weight: 100;
+        width: 100%;
+        position: relative;
+        display: flex;
+        align-items: center;
+        width: 120%;
+        margin-bottom: 25px;
+        border: 2px solid #748C65;
+        border-radius: 10px;
+        background-color: #DBE0DA;
+        box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1), 0px 7px 0px 0px rgba(0, 0, 0, 0.1);
+
+    }
 }
