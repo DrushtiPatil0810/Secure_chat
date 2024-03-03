@@ -1,23 +1,20 @@
 <?php
 
+use App\Http\Controllers\AuthController;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\WelcomeController;
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/', [WelcomeController::class, 'index'])->name('welcome');
 
 Route::get('/verification', function () {
     return view('verification');
-});
+})->name('verification');
 
-Route::get('/sign-in', function () {
-    return view('sign-in');
-});
 
-Route::get('/sign-up', function () {
-    return view('sign-up');
-});
+Route::get('/signin', [AuthController::class, 'showLoginForm'])->name('signin');
+
+Route::get('/signup', [AuthController::class, 'showRegistrationForm'])->name('signup');
 
 Route::get('/dashboard', function () {
     return view('dashboard');
-});
+})->name('dashboard');
