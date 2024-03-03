@@ -4,11 +4,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sign-In</title>
-    <link rel="stylesheet" href="sign-in.css">
+    <title>Welcome</title>
+    <link rel="stylesheet" href="{{ asset('css/welcome.css') }}">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <script src="sign-in.js"></script>
+    <script src="{{ asset('js/welcome.js') }}"></script>
     <link
         href="https://fonts.googleapis.com/css2?family=Aleo:ital,wght@0,100..900;1,100..900&family=Bai+Jamjuree:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;1,200;1,300;1,400;1,500;1,600;1,700&display=swap"
         rel="stylesheet">
@@ -20,24 +20,23 @@
 <body>
     <section>
         <div class="container">
-            <div class="user signinBx">
-                <div class="imgBx"><img src="Logo1.png" alt="logo" /></div>
+            <div class="user welcomeBx">
+                <div class="imgBx"><img src="{{ asset('images/Logo.png') }}" alt="Logo" class="img-fluid">
+                </div>
                 <div class="formBx">
                     <form action="" onsubmit="return false;" class="form">
-                        <h2 class="Aleo">Sign-In Here</h2>
+                        <h2 class="Aleo">Welcome</h2>
                         <div class="input-container">
-                            <i class="fa-solid fa-regular fa-user"></i>
-                            <input type="text" name="Username" placeholder="Username" autocomplete="off" class="input"
-                                required />
+                            <button onclick="window.location.href = 'sign-in.html';" class="btn">I have an
+                                account</button>
                         </div>
-
                         <div class="input-container">
-                            <i class="fa-solid fa-phone-volume"></i>
-                            <input type="tel" name="Contact_Number" placeholder="Contact Number" autocomplete="off"
-                                class="input" required />
+                            <button onclick="window.location.href = 'sign-up.html';" class="btn">I have an don't
+                                account</button>
                         </div>
                         <div class="submit B612">
-                            <input type="submit" name="" value="Login" id="loginButton" />
+                            <a href="#" class="help">Need Help?
+                            </a>
                         </div>
                     </form>
                 </div>
